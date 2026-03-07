@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = 'dockerhub-id' // Replace with your Jenkins DockerHub credentials ID
+        DOCKERHUB_CREDENTIALS = 'satya1031' // Replace with your Jenkins DockerHub credentials ID
         IMAGE_NAME = 'vijay3247/restaurant-site'
     }
 

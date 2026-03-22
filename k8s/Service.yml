@@ -1,1 +1,12 @@
-api
+apiVersion: v1
+kind: Service
+metadata:
+  name: hotstar-service
+spec:
+  selector:
+    app: ott
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

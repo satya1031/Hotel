@@ -1,1 +1,21 @@
-apiV
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel-restaurant
+  labels:
+    app: hotel-restaurant
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hotel-restaurant
+  template:
+    metadata:
+      labels:
+        app: hotel-restaurant
+    spec:
+      containers:
+      - name: hotel-restaurant-container
+        image: satya1031/hotel-restaurant:latest
+        ports:
+        - containerPort: 8080
